@@ -1,0 +1,901 @@
+/* ============================================
+   RESET & VARIABLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-purple: #D9B6F2;
+    --color-purple-dark: #B882D9;
+    --color-blue: #A3CFD9;
+    --color-orange: #FF9933;
+    --color-green: #B3BF54;
+    --color-green-dark: #768030;
+    --color-paper: #fffef9;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        );
+    background-blend-mode: multiply;
+    overflow-x: hidden;
+}
+
+/* ============================================
+   HEADER & NAVBAR
+   ============================================ */
+.header-section {
+    padding: 20px 0 0 0;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+.custom-navbar {
+    background: var(--color-green);
+    padding: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-toggler {
+    border: 2px solid var(--color-green-dark);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 23, 23, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.custom-navbar .nav-link {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    background: var(--color-green-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   STICKERS DECORATIVOS
+   ============================================ */
+.sticker-deco {
+    position: fixed;
+    width: 140px;
+    height: 140px;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.85;
+}
+
+.sticker-deco img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sticker-1 {
+    top: 180px;
+    left: 3%;
+    animation: floatSticker 9s ease-in-out infinite;
+}
+
+.sticker-2 {
+    top: 250px;
+    right: 4%;
+    width: 120px;
+    height: 120px;
+    animation: floatSticker 8s ease-in-out infinite 1.5s;
+}
+
+.sticker-3 {
+    top: 45%;
+    left: 2%;
+    width: 150px;
+    height: 150px;
+    animation: floatSticker 10s ease-in-out infinite 0.5s;
+}
+
+.sticker-4 {
+    top: 52%;
+    right: 3%;
+    width: 130px;
+    height: 130px;
+    animation: floatSticker 9.5s ease-in-out infinite 2s;
+}
+
+.sticker-5 {
+    bottom: 250px;
+    left: 4%;
+    width: 135px;
+    height: 135px;
+    animation: floatSticker 8.5s ease-in-out infinite 1s;
+}
+
+.sticker-6 {
+    bottom: 200px;
+    right: 5%;
+    width: 145px;
+    height: 145px;
+    animation: floatSticker 9s ease-in-out infinite 2.5s;
+}
+
+@keyframes floatSticker {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(6deg);
+    }
+}
+
+/* ============================================
+   DIARY CONTENT
+   ============================================ */
+.diary-content {
+    padding: 40px 0 60px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   DIARY HEADER
+   ============================================ */
+.diary-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.month-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(184, 130, 217, 0.4);
+}
+
+.diary-title {
+    font-family: 'Caveat', cursive;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.diary-intro {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.diary-meta {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    color: #999;
+    font-size: 0.95rem;
+    flex-wrap: wrap;
+}
+
+.diary-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.diary-meta i {
+    color: var(--color-purple-dark);
+}
+
+/* ============================================
+   DIARY PAPER
+   ============================================ */
+.diary-paper {
+    background: var(--color-paper);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.05),
+        0 10px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(179, 191, 84, 0.2);
+    position: relative;
+}
+
+.diary-paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 2px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 10px,
+        rgba(255, 153, 51, 0.1) 10px,
+        rgba(255, 153, 51, 0.1) 11px
+    );
+}
+
+/* ============================================
+   WEEK SECTION
+   ============================================ */
+.diary-week {
+    margin-bottom: 60px;
+}
+
+.week-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.week-number {
+    width: 55px;
+    height: 55px;
+    background: var(--color-blue);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.week-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-green-dark);
+    margin: 0;
+    flex: 1;
+}
+
+.week-dates {
+    font-size: 0.9rem;
+    color: #999;
+    font-style: italic;
+}
+
+/* ============================================
+   DIARY ENTRY
+   ============================================ */
+.diary-entry {
+    padding-left: 20px;
+}
+
+.entry-content {
+    line-height: 1.9;
+    color: #333;
+}
+
+.entry-content p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+}
+
+.first-letter::first-letter {
+    font-size: 3.5rem;
+    font-family: 'Caveat', cursive;
+    color: var(--color-purple-dark);
+    float: left;
+    line-height: 0.8;
+    margin: 8px 8px 0 0;
+}
+
+/* ============================================
+   SPECIAL BOXES
+   ============================================ */
+.memory-box {
+    background: rgba(217, 182, 242, 0.1);
+    border-left: 4px solid var(--color-purple-dark);
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.memory-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--color-purple-dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.memory-text h4 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-purple-dark);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.memory-text p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* ============================================
+   PERSONAL NOTES
+   ============================================ */
+.personal-note {
+    font-family: 'Patrick Hand', cursive;
+    background: #fff9e6;
+    border: 2px dashed var(--color-orange);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 25px 0;
+    font-size: 1.1rem;
+    color: #666;
+    position: relative;
+    max-width: 500px;
+}
+
+.personal-note::before {
+    content: '📌';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    font-size: 1.5rem;
+}
+
+.personal-note.left {
+    margin-right: auto;
+}
+
+.personal-note.right {
+    margin-left: auto;
+}
+
+.personal-note p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* ============================================
+   LEARNING CARD
+   ============================================ */
+.learning-card {
+    background: rgba(163, 207, 217, 0.1);
+    border: 3px dashed var(--color-blue);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.learning-card h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.learning-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.learning-card li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.learning-card li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-blue);
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   PHOTO COLLAGE
+   ============================================ */
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.collage-item {
+    position: relative;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    transition: transform 0.3s;
+}
+
+.collage-item:nth-child(even) img {
+    transform: rotate(2deg);
+}
+
+.collage-item:hover img {
+    transform: rotate(0deg) scale(1.05);
+}
+
+.photo-caption {
+    font-family: 'Patrick Hand', cursive;
+    text-align: center;
+    margin-top: 12px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* ============================================
+   INSIGHT BOX
+   ============================================ */
+.insight-box {
+    background: rgba(255, 153, 51, 0.08);
+    border-left: 4px solid var(--color-orange);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.insight-box h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.insight-box p {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.insight-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   QUOTE SPECIAL
+   ============================================ */
+.quote-special {
+    position: relative;
+    background: linear-gradient(135deg, rgba(163, 207, 217, 0.1), rgba(217, 182, 242, 0.1));
+    border-radius: 15px;
+    padding: 35px 35px 35px 80px;
+    margin: 35px 0;
+}
+
+.quote-special .bi-quote {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 3rem;
+    color: var(--color-blue);
+    opacity: 0.4;
+}
+
+.quote-text {
+    font-family: 'Caveat', cursive;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: #666;
+    font-style: italic;
+    margin: 0;
+}
+
+/* ============================================
+   DICA BOX
+   ============================================ */
+.dica-box {
+    background: white;
+    border: 3px dashed var(--color-green);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dica-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.dica-header i {
+    color: var(--color-green);
+    font-size: 1.5rem;
+}
+
+.dica-header h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-green-dark);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.dica-box ol {
+    padding-left: 25px;
+    margin: 0;
+}
+
+.dica-box li {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* ============================================
+   BRAINSTORM NOTES
+   ============================================ */
+.brainstorm-notes {
+    background: #fffef9;
+    border: 2px solid var(--color-orange);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.brainstorm-notes h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-orange);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.brainstorm-notes p {
+    margin-bottom: 15px;
+}
+
+.brainstorm-notes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.brainstorm-notes li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+.brainstorm-notes li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: 700;
+}
+
+/* ============================================
+   FEELING METER
+   ============================================ */
+.feeling-meter {
+    background: rgba(217, 182, 242, 0.08);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.feeling-meter h5 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: var(--color-purple-dark);
+    margin-bottom: 20px;
+}
+
+.feelings {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.feeling-emoji {
+    font-size: 2.5rem;
+    opacity: 0.4;
+    transition: all 0.3s;
+}
+
+.feeling-emoji.active {
+    opacity: 1;
+    transform: scale(1.3);
+}
+
+.feeling-meter p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.1rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ============================================
+   GRATITUDE BOX
+   ============================================ */
+.gratitude-box {
+    background: linear-gradient(135deg, rgba(217, 182, 242, 0.1), rgba(163, 207, 217, 0.1));
+    border: 3px dashed var(--color-purple);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 35px 0;
+}
+
+.gratitude-box h5 {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem;
+    color: var(--color-purple-dark);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gratitude-list p {
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+/* ============================================
+   CLOSING NOTE
+   ============================================ */
+.closing-note {
+    background: rgba(255, 153, 51, 0.08);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 35px 0 0 0;
+    text-align: center;
+}
+
+.closing-note p {
+    font-family: 'Caveat', cursive;
+    font-size: 1.6rem;
+    color: var(--color-orange);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.signature {
+    font-family: 'Caveat', cursive;
+    font-size: 2rem !important;
+    color: var(--color-purple-dark) !important;
+    font-weight: 700 !important;
+}
+
+/* ============================================
+   DIARY DIVIDER
+   ============================================ */
+.diary-divider {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.diary-divider span {
+    font-size: 2rem;
+    color: var(--color-purple-dark);
+    opacity: 0.3;
+}
+
+/* ============================================
+   BACK SECTION
+   ============================================ */
+.back-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.btn-back-diary {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: var(--color-purple-dark);
+    border: 3px dashed var(--color-purple-dark);
+    padding: 16px 40px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn-back-diary:hover {
+    background: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
+    color: white;
+    transform: translateX(-5px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-section {
+    background: var(--color-blue);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.footer-decoration {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    animation: footerBounce 2s ease-in-out infinite;
+}
+
+@keyframes footerBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
+    .custom-navbar .nav-link {
+        margin: 5px 0;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .sticker-deco {
+        display: none;
+    }
+    
+    .diary-paper {
+        padding: 35px 25px;
+    }
+    
+    .diary-paper::before {
+        left: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .diary-title {
+        font-size: 3rem;
+    }
+    
+    .diary-intro {
+        font-size: 1.1rem;
+    }
+    
+    .week-title {
+        font-size: 2rem;
+    }
+    
+    .entry-content p {
+        font-size: 1.05rem;
+    }
+    
+    .first-letter::first-letter {
+        font-size: 2.8rem;
+    }
+    
+    .photo-collage {
+        grid-template-columns: 1fr;
+    }
+    
+    .personal-note {
+        max-width: 100%;
+    }
+    
+    .quote-special {
+        padding: 25px 20px 25px 60px;
+    }
+    
+    .quote-text {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .diary-paper {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    
+    .diary-title {
+        font-size: 2.5rem;
+    }
+    
+    .week-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .feeling-emoji {
+        font-size: 2rem;
+    }
+    
+    .footer-decoration {
+        width: 100px;
+    }
+}

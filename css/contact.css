@@ -1,0 +1,451 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        );
+    background-blend-mode: multiply;
+    min-height: 100vh;
+}
+
+/* Header */
+.header-section {
+    padding: 20px 0 0 0;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Navbar */
+.custom-navbar {
+    background: #B3BF54;
+    padding: 15px 0; /* uniform navbar height */
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* uniform shadow */
+}
+
+.custom-navbar .navbar-toggler {
+    border: 2px solid #768030;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px; /* uniform toggler size */
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 23, 23, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.custom-navbar .nav-link {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 15px; /* uniform spacing */
+    font-size: 18px;
+    padding: 10px 20px; /* uniform hit area */
+    border-radius: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    background: #768030;
+    color: white;
+}
+
+/* Main Content */
+.contact-main {
+    padding: 60px 0;
+    min-height: calc(100vh - 350px);
+}
+
+.page-title {
+    margin-bottom: 50px;
+}
+
+.page-title h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #B882D9;
+    position: relative;
+    display: inline-block;
+}
+
+.page-title h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #B882D9, #A3CFD9);
+    border-radius: 2px;
+}
+
+/* Social Section */
+.social-section {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.social-section h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 15px;
+}
+
+.social-description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.social-link i {
+    font-size: 2rem;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-name {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #171717;
+}
+
+.social-handle {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Social Link Colors */
+.social-link.instagram {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+    background-size: 200% 200%;
+}
+
+.social-link.instagram:hover {
+    background-position: right center;
+    transform: translateX(5px);
+}
+
+.social-link.instagram i,
+.social-link.instagram .social-name,
+.social-link.instagram .social-handle {
+    color: white;
+}
+
+.social-link.linkedin {
+    background: #0077b5;
+}
+
+.social-link.linkedin:hover {
+    background: #005885;
+    transform: translateX(5px);
+}
+
+.social-link.linkedin i,
+.social-link.linkedin .social-name,
+.social-link.linkedin .social-handle {
+    color: white;
+}
+
+.social-link.github {
+    background: #333;
+}
+
+.social-link.github:hover {
+    background: #000;
+    transform: translateX(5px);
+}
+
+.social-link.github i,
+.social-link.github .social-name,
+.social-link.github .social-handle {
+    color: white;
+}
+
+.social-link.behance {
+    background: #1769ff;
+}
+
+.social-link.behance:hover {
+    background: #0057e7;
+    transform: translateX(5px);
+}
+
+.social-link.behance i,
+.social-link.behance .social-name,
+.social-link.behance .social-handle {
+    color: white;
+}
+
+.social-link.email {
+    background: #FF9933;
+}
+
+.social-link.email:hover {
+    background: #e68a2e;
+    transform: translateX(5px);
+}
+
+.social-link.email i,
+.social-link.email .social-name,
+.social-link.email .social-handle {
+    color: white;
+}
+
+.social-link:hover i {
+    transform: scale(1.1);
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 15px;
+}
+
+.form-description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+.contact-form .form-label {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    color: #171717;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s;
+}
+
+.contact-form .form-control:focus {
+    border-color: #B882D9;
+    box-shadow: 0 0 0 0.2rem rgba(184, 130, 217, 0.25);
+}
+
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.btn-submit {
+    background: linear-gradient(135deg, #B882D9, #A3CFD9);
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(184, 130, 217, 0.4);
+}
+
+.btn-submit i {
+    font-size: 1.2rem;
+}
+
+/* Success Modal */
+.success-modal .modal-content {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.success-icon {
+    font-size: 5rem;
+    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.success-modal h3 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 15px;
+}
+
+.success-modal p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn-success-ok {
+    background: #28a745;
+    border: none;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-success-ok:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer-section {
+    background: #A3CFD9;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 60px;
+}
+
+.footer-decoration {
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .custom-navbar .nav-link {
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .social-section,
+    .form-section {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 150px;
+    }
+    
+    .page-title h1 {
+        font-size: 2rem;
+    }
+    
+    .social-section,
+    .form-section {
+        padding: 25px;
+    }
+    
+    .social-link {
+        padding: 15px;
+    }
+    
+    .social-link i {
+        font-size: 1.5rem;
+        margin-right: 15px;
+    }
+    
+    .footer-section {
+        height: 100px;
+    }
+    
+    .footer-decoration {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .social-section h2,
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .btn-submit {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

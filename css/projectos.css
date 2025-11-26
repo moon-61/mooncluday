@@ -1,0 +1,755 @@
+/* ============================================
+   RESET & VARIABLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-purple: #D9B6F2;
+    --color-purple-dark: #B882D9;
+    --color-blue: #A3CFD9;
+    --color-orange: #FF9933;
+    --color-green: #B3BF54;
+    --color-green-dark: #768030;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            #fff 0px,
+            #fff 30px,
+            #f5f5f5 30px,
+            #f5f5f5 60px
+        );
+    background-blend-mode: multiply;
+    min-height: 100vh;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header-section {
+    padding: 20px 0 0 0;
+}
+
+.logo-container {
+    margin-bottom: 10px;
+}
+
+.logo-img {
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.custom-navbar {
+    background: var(--color-green);
+    padding: 15px 0;
+    border-radius: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar .navbar-toggler {
+    border: 2px solid var(--color-green-dark);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+}
+
+.custom-navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(23, 23, 23, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.custom-navbar .nav-link {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    color: #171717;
+    margin: 0 15px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.custom-navbar .nav-link i {
+    font-size: 1.1rem;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    background: var(--color-green-dark);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+    padding: 60px 20px 40px;
+    text-align: center;
+    position: relative;
+}
+
+.project-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--color-purple), var(--color-purple-dark));
+    color: white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(217, 182, 242, 0.4);
+}
+
+.project-badge i {
+    font-size: 1.1rem;
+}
+
+.page-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--color-orange);
+    margin-bottom: 15px;
+    line-height: 1.1;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+.main-content {
+    padding: 40px 0 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content-section {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-blue);
+    margin-bottom: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.title-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: var(--color-orange);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.title-decoration {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-purple), var(--color-orange), var(--color-blue));
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.journal-entry {
+    position: relative;
+}
+
+/* ============================================
+   CONTENT CARDS
+   ============================================ */
+.content-card {
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    border: 3px dashed var(--color-purple);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-purple-dark);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--color-purple-dark), var(--color-purple));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.content-card:hover .card-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.card-title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.content-card p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.content-card p:last-of-type {
+    margin-bottom: 0;
+}
+
+.handwritten-note {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: var(--color-orange);
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: rgba(255, 153, 51, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid var(--color-orange);
+    display: inline-block;
+}
+
+.handwritten-note i {
+    margin-right: 8px;
+}
+
+/* ============================================
+   IMAGE CARDS
+   ============================================ */
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+.image-card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px dashed var(--color-blue);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 500px;
+    position: relative;
+}
+
+.image-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-blue);
+}
+
+.image-frame {
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-card:hover .image-frame img {
+    transform: scale(1.05);
+}
+
+.image-caption {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #555;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.image-caption i {
+    color: var(--color-orange);
+}
+
+.image-wrapper.right .image-card {
+    transform: rotate(2deg);
+}
+
+.image-wrapper.left .image-card {
+    transform: rotate(-2deg);
+}
+
+.image-wrapper.right .image-card:hover,
+.image-wrapper.left .image-card:hover {
+    transform: rotate(0deg) translateY(-8px);
+}
+
+/* ============================================
+   STICKER SPACES
+   ============================================ */
+.sticker-space {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    pointer-events: none;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sticker-space img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Posiciones específicas */
+.sticker-header {
+    top: -60px;
+    right: 5%;
+    width: 180px;
+    height: 180px;
+    animation: floatSticker 6s ease-in-out infinite;
+}
+
+.sticker-corner-tl {
+    top: -25px;
+    left: -25px;
+    width: 120px;
+    height: 120px;
+}
+
+.sticker-corner-br {
+    bottom: -25px;
+    right: -25px;
+    width: 120px;
+    height: 120px;
+}
+
+.sticker-corner-pdf {
+    top: -30px;
+    right: -30px;
+    width: 130px;
+    height: 130px;
+}
+
+.sticker-float-right {
+    top: -50px;
+    right: -60px;
+    width: 160px;
+    height: 160px;
+    /* animation removed to reduce continuous GPU work */
+}
+
+.sticker-float-left {
+    top: -50px;
+    left: -60px;
+    width: 160px;
+    height: 160px;
+    /* animation removed to reduce continuous GPU work */
+}
+
+.sticker-divider {
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+}
+
+.sticker-button {
+    top: -50px;
+    right: -30px;
+    width: 160px;
+    height: 160px;
+}
+
+.sticker-footer {
+    top: 30px;
+    right: 12%;
+    width: 200px;
+    height: 200px;
+    /* animation removed to reduce continuous GPU work */
+}
+
+@keyframes floatSticker {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(8deg);
+    }
+}
+
+/* ============================================
+   SECTION DIVIDER
+   ============================================ */
+.section-divider {
+    position: relative;
+    margin: 80px 0;
+    text-align: center;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-purple-dark) 20%, var(--color-purple-dark) 80%, transparent);
+}
+
+/* ============================================
+   PDF CONTAINER
+   ============================================ */
+.pdf-container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px dashed var(--color-green);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+    overflow: hidden;
+}
+
+.pdf-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--color-green), var(--color-green-dark));
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.pdf-header i {
+    font-size: 1.5rem;
+}
+
+.pdf-container iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 12px;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.figma-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    position: relative;
+}
+
+.btn-figma {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #1e1e1e;
+    border: 3px dashed #1e1e1e;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-figma::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-figma:hover::before {
+    left: 100%;
+}
+
+.btn-figma:hover {
+    background: #1e1e1e;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-figma i:first-child {
+    font-size: 1.3rem;
+}
+
+.btn-figma i:last-child {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-figma:hover i:last-child {
+    transform: translate(3px, -3px);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer-section {
+    background: var(--color-blue);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.footer-decoration {
+    width: 150px;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+    /* animation removed to reduce continuous GPU work */
+}
+
+@keyframes footerBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+#imageModal .modal-content {
+    background: white;
+    border-radius: 20px;
+    border: 3px dashed var(--color-purple);
+}
+
+#imageModal .modal-header {
+    padding: 20px;
+}
+
+#imageModal .btn-close {
+    background-color: var(--color-orange);
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+#imageModal .btn-close:hover {
+    transform: rotate(90deg) scale(1.1);
+}
+
+#imageModal .modal-body {
+    padding: 0 30px 30px;
+}
+
+.modal-caption {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 991px) {
+    .custom-navbar .nav-link {
+        margin: 5px 0;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .page-title {
+        font-size: 3.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .sticker-space {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 150px;
+    }
+    
+    .page-title {
+        font-size: 2.8rem;
+    }
+    
+    .page-subtitle {
+        font-size: 1rem;
+    }
+    
+    .project-badge {
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        flex-direction: column;
+    }
+    
+    .title-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .content-card {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .content-card p {
+        font-size: 1rem;
+    }
+    
+    .handwritten-note {
+        font-size: 1.3rem;
+    }
+    
+    .image-wrapper.right .image-card,
+    .image-wrapper.left .image-card {
+        transform: rotate(0deg) !important;
+    }
+    
+    .image-wrapper {
+        padding: 15px 0;
+    }
+    
+    .pdf-container iframe {
+        height: 400px;
+    }
+    
+    .btn-figma {
+        padding: 14px 28px;
+        font-size: 1rem;
+    }
+    
+    .footer-section {
+        height: 100px;
+        margin-top: 60px;
+    }
+    
+    .footer-decoration {
+        width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        padding: 40px 15px 30px;
+    }
+    
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        margin-bottom: 50px;
+    }
+    
+    .content-card {
+        padding: 20px;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+}
