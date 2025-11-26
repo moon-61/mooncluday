@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon Clouday</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="icon" type="image/png" href="../img/stickers_blog/star.png" sizes="32x32">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container text-center" data-aos="fade-down">
+                <img src="../img/home/logo.png" alt="Moon Cloudsy" class="logo-img">
+            </div>
+            
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../html/home-ES.html">
+                                    <i class="bi bi-house-fill"></i>
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about-ES.html">
+                                    <i class="bi bi-person-fill"></i>
+                                    Sobre mí
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/blog-ES.html">
+                                    <i class="bi bi-journal-text"></i>
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/contact-ES.html">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button class="lang-btn" id="langBtn">
+                    <i class="bi bi-globe"></i>
+                    <span id="currentLang">ES</span>
+                    <i class="bi bi-chevron-down"></i>
+                </button>
+                <div class="lang-dropdown" id="langDropdown">
+                    <a href="../html/home-PT.html" class="lang-option">
+                        <span class="lang-flag">🇧🇷</span>
+                        Portugués
+                    </a>
+                    <a href="../html/home-ES.html" class="lang-option active">
+                        <span class="lang-flag">🇪🇸</span>
+                        Español
+                    </a>
+                    <a href="../html/home-EN.html" class="lang-option">
+                        <span class="lang-flag">🇺🇸</span>
+                        Inglés
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-4">
+                    <!-- Image Side -->
+                    <div class="col-lg-5" data-aos="fade-right">
+                        <div class="hero-image-wrapper">
+                            <div class="image-decoration star-decoration">
+                                <img src="../img/home/star.png" alt="Star" class="floating-star">
+                            </div>
+                            <div class="hero-image-frame">
+                                <img src="../img/home/yoo.jpg" alt="Moon Cloudsy" class="hero-main-image">
+                            </div>
+                            <div class="image-badge">
+                                <i class="bi bi-palette-fill"></i>
+                                <span>Diseñadora</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cards Side -->
+                    <div class="col-lg-7">
+                        <div class="hero-cards-wrapper">
+                            <div class="hero-title" data-aos="fade-left">
+                                <h1>¡Bienvenido a mi universo creativo!</h1>
+                            </div>
+
+                            <div class="row g-3 mt-3">
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="100">
+                                    <a href="../html/projects-ES.html" class="feature-card card-purple">
+                                        <div class="card-icon">
+                                            <i class="bi bi-camera-reels-fill"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>¡Proyectos!</h3>
+                                            <p>Mi diario de diseño. ¡Descubre mis proyectos y mi proceso creativo!</p>
+                                        </div>
+                                        <div class="card-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="200">
+                                    <a href="../html/design-hacks-ES.html" class="feature-card card-blue">
+                                        <div class="card-icon">
+                                            <i class="bi bi-lightbulb-fill"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>¡Trucos de Diseño!</h3>
+                                            <p>Secretos de diseño que realmente funcionan. ¡Descubre lo que aprendí en el camino!</p>
+                                        </div>
+                                        <div class="card-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-12" data-aos="fade-left" data-aos-delay="300">
+                                    <a href="../html/Did-you-miss-ES.html" class="feature-card card-orange">
+                                        <div class="card-icon">
+                                            <i class="bi bi-stars"></i>
+                                        </div>
+                                        <div class="card-content">
+                                            <h3>¿Te perdiste esto?</h3>
+                                            <p>Novedades que todos están usando. ¡Mantente al día con las últimas tendencias!</p>
+                                        </div>
+                                        <div class="card-arrow">
+                                            <i class="bi bi-arrow-right"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You'll Find Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title text-center" data-aos="fade-up">
+                    ¿Qué encontrarás<br>en este sitio?
+                </h2>
+
+                <div class="row align-items-center g-5 mt-4">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="content-box">
+                            <div class="content-icon">
+                                <i class="bi bi-gem"></i>
+                            </div>
+                            <p class="content-text">
+                                Proyectos, procesos y recursos para diseñadoras en formación. 
+                                <span class="highlight">¡Todo lo que aprendo lo comparto aquí!</span>
+                            </p>
+                            
+                            <div class="content-features mt-4">
+                                <div class="feature-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Tutoriales prácticos</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Recursos gratuitos</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                    <span>Consejos semanales</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="illustration-wrapper">
+                            <div class="illustration-decoration"></div>
+                            <img src="../img/home/Bakugo.png" alt="Design Illustration" class="illustration-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Card Section -->
+        <section class="about-card-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="about-card-modern" data-aos="zoom-in">
+                            <div class="about-card-bg"></div>
+                            <div class="row g-0 align-items-center">
+                                <div class="col-md-4">
+                                    <div class="about-image-wrapper">
+                                        <div class="about-image-decoration"></div>
+                                        <img src="../img/home/Yo.jpg" alt="Moon" class="about-image">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="about-content">
+                                        <div class="about-badge">
+                                            <i class="bi bi-star-fill"></i>
+                                            <span>Diseñadora en Formación</span>
+                                        </div>
+                                        <h2 class="about-title">¡Sobre Mí!</h2>
+                                        
+                                        <div class="about-info-grid">
+                                            <div class="info-item">
+                                                <i class="bi bi-person-fill"></i>
+                                                <div>
+                                                    <span class="info-label">Nombre</span>
+                                                    <span class="info-value">Moon!</span>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <i class="bi bi-book-fill"></i>
+                                                <div>
+                                                    <span class="info-label">Curso</span>
+                                                    <span class="info-value">Diseño Digital</span>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <i class="bi bi-building"></i>
+                                                <div>
+                                                    <span class="info-label">Universidad</span>
+                                                    <span class="info-value">PUC-SP</span>
+                                                </div>
+                                            </div>
+                                            <div class="info-item">
+                                                <i class="bi bi-geo-alt-fill"></i>
+                                                <div>
+                                                    <span class="info-label">Ubicación</span>
+                                                    <span class="info-value">Bolivia</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="../html/about-ES.html" class="btn-know-more">
+                                            Saber Más
+                                            <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section" data-aos="fade-up">
+            <div class="container">
+                <div class="newsletter-box">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-6">
+                            <h3>¡Mantente al día!</h3>
+                            <p>Recibe las últimas novedades y consejos directamente en tu correo.</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <form class="newsletter-form">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Tu mejor correo" required>
+                                    <button type="submit" class="btn btn-newsletter">
+                                        Suscribirse
+                                        <i class="bi bi-send-fill"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <img src="../img/home/perro.png" alt="Decoración" class="footer-decoration">
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../javascript/home.js"></script>
+</body>
+</html>

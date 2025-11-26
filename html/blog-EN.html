@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Moon Clouday</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/png" href="../img/stickers_blog/star.png" sizes="32x32">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <div class="logo-container text-center">
+                <img src="../img/home/logo.png" alt="Moon Clouday" class="logo-img">
+            </div>
+            
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="../html/home-EN.html">
+                                <i class="bi bi-house-fill"></i> Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../html/about-EN.html">
+                                <i class="bi bi-person-fill"></i> About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="../html/blog-EN.html"
+                                ><i class="bi bi-journal-text"></i> Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../html/contact-EN.html">
+                                <i class="bi bi-envelope-fill"></i> Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="blog-main">
+        <div class="container">
+            
+            <!-- Blog Header -->
+            <section class="blog-hero">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="blog-title-wrapper" data-aos="fade-right">
+                            <h1 class="blog-main-title">Blog</h1>
+                            <p class="blog-subtitle">My diary as a design student 📓</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end" data-aos="fade-left">
+                        <div class="filter-box">
+                            <button class="filter-btn" id="orderBtn">
+                                <i class="bi bi-funnel-fill"></i>
+                                <span id="orderText">Most recent</span>
+                                <i class="bi bi-chevron-down arrow-icon"></i>
+                            </button>
+                            <div class="filter-dropdown" id="dropdownMenu">
+                                <button class="dropdown-item" data-order="newest">
+                                    <i class="bi bi-calendar-check"></i> Most recent
+                                </button>
+                                <button class="dropdown-item" data-order="oldest">
+                                    <i class="bi bi-calendar"></i> Oldest
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Posts -->
+            <section class="blog-posts-section">
+                <div id="blogPosts" class="posts-container">
+                    
+                    <!-- November 2025 - COMING SOON -->
+                    <article class="blog-card coming-soon" data-date="2025-11" data-aos="fade-up">
+                        <div class="coming-soon-overlay">
+                            <div class="coming-soon-content">
+                                <i class="bi bi-hourglass-split"></i>
+                                <h3>Coming Soon!</h3>
+                                <p>New content arriving in November 2025</p>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>November</span></div>
+                                    <div class="placeholder-image"><i class="bi bi-image"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">November 2025</h2>
+                                    <h3 class="card-title">New chapter coming...</h3>
+                                    <p class="card-description">Stay tuned! I'll soon share my new adventures and learnings from November.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- October 2025 -->
+                    <article class="blog-card" data-date="2025-10" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>October</span></div>
+                                    <img src="../img/blog/OCTUBRE.jpg" alt="October 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">October 2025</h2>
+                                    <h3 class="card-title">October: my happiest month</h3>
+                                    <p class="card-description">
+                                        October brought my mom's visit, a trip to Solomon's Temple, Design Week,  
+                                        graffiti workshop, aquarium full of creatures, arepas with friends and the SESC of stories.  
+                                        And of course: Bakugo, always a global icon.
+                                    </p>
+                                    <div class="card-footer-info">
+                                        <a href="../html/octuber-EN.html" class="btn-read-more">
+                                                Read more <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                        <div class="post-meta"><span class="meta-item">
+                                            <i class="bi bi-clock"></i> 5 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- September 2025 -->
+                    <article class="blog-card" data-date="2025-09" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>September</span></div>
+                                    <img src="../img/blog/septiembre.jpg" alt="September 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">September 2025</h2>
+                                    <h3 class="card-title">September: learnings and homesickness</h3>
+                                    <p class="card-description">
+                                        September brought my first UI project, lots of learnings,  
+                                        an unexpected comparison between apps, a movie that made me emotional,  
+                                        new friends, walks without headphones and strong homesickness for Santa Cruz.
+                                    </p>
+                                    <div class="card-footer-info">
+                                        <a href="../html/september-EN.html" class="btn-read-more">
+                                                Read more <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 7 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- August 2025 -->
+                    <article class="blog-card" data-date="2025-08" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>August</span></div>
+                                    <img src="../img/blog/agosto.jpg" alt="August 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">August 2025</h2>
+                                    <h3 class="card-title">Back to school and new friends</h3>
+                                    <p class="card-description">The second semester started! I met incredible people in the new class and I'm excited about the subjects. This semester I'll focus on usability...</p>
+                                    <div class="card-footer-info">
+                                        <a href="../html/august-EN.html" class="btn-read-more">
+                                                Read more <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 4 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- July 2025 - HIDDEN INITIALLY -->
+                    <article class="blog-card" data-date="2025-07" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>July</span></div>
+                                    <img src="../img/blog/julioo.jpg" alt="July 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">July 2025</h2>
+                                    <h3 class="card-title">Vacation at home</h3>
+                                    <p class="card-description">July was a pause and refuge: going back home, reconnecting with myself and giving myself permission not to produce — just feel, exist and organize my thoughts at my own pace.</p>
+                                    <div class="card-footer-info">
+                                        <a href="../html/july-EN.html" class="btn-read-more">
+                                                Read more <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                        <div class="post-meta"><span class="meta-item">
+                                            <i class="bi bi-clock"></i> 7 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- June 2025 - HIDDEN -->
+                    <article class="blog-card hidden-post" data-date="2025-06" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>June</span></div>
+                                    <img src="../img/blog/junio.jpg" alt="June 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">June 2025</h2>
+                                    <h3 class="card-title">End of semester and lots of rushing</h3>
+                                    <p class="card-description">I survived the final deliveries! This month was very stressful but also full of learning. I delivered my mobile computing project...</p>
+                                    <div class="card-footer-info">
+                                        <button class="btn-read-more">Read more <i class="bi bi-arrow-right"></i></button>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 5 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- May 2025 - HIDDEN -->
+                    <article class="blog-card hidden-post" data-date="2025-05" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>May</span></div>
+                                    <img src="../img/blog/mayo.jpg" alt="May 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">May 2025</h2>
+                                    <h3 class="card-title">Discovering the world of plugins</h3>
+                                    <p class="card-description">This month I discovered the power of Figma plugins! My productivity increased so much. I also participated in my first design hackathon...</p>
+                                    <div class="card-footer-info">
+                                        <button class="btn-read-more">Read more <i class="bi bi-arrow-right"></i></button>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 8 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- April 2025 - HIDDEN -->
+                    <article class="blog-card hidden-post" data-date="2025-04" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>April</span></div>
+                                    <img src="../img/blog/abril2.jpg" alt="April 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">April 2025</h2>
+                                    <h3 class="card-title">Typography classes and lots of inspiration</h3>
+                                    <p class="card-description">I fell in love with typography! This month's classes opened my mind to a world I didn't know. I also visited a design exhibition...</p>
+                                    <div class="card-footer-info">
+                                        <button class="btn-read-more">Read more <i class="bi bi-arrow-right"></i></button>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 6 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- March 2025 - HIDDEN -->
+                    <article class="blog-card hidden-post" data-date="2025-03" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>March</span></div>
+                                    <img src="../img/blog/marzo.jpg" alt="March 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">March 2025</h2>
+                                    <h3 class="card-title">First group projects</h3>
+                                    <p class="card-description">Teamwork is challenging! This month I learned a lot about collaboration and communication. We created our first UX research project together...</p>
+                                    <div class="card-footer-info">
+                                        <button class="btn-read-more">Read more <i class="bi bi-arrow-right"></i></button>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 5 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- February 2025 - HIDDEN -->
+                    <article class="blog-card hidden-post" data-date="2025-02" data-aos="fade-up">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card-image-wrapper">
+                                    <div class="month-badge"><i class="bi bi-calendar3"></i> <span>February</span></div>
+                                    <img src="../img/blog/febrero2.jpg" alt="February 2025" class="card-image">
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-content">
+                                    <h2 class="card-month">February 2025</h2>
+                                    <h3 class="card-title">The beginning of everything at PUC-SP!</h3>
+                                    <p class="card-description">My first month at university! I arrived from Bolivia full of dreams and a bit nervous. PUC-SP welcomed me with open arms and I already made incredible friends...</p>
+                                    <div class="card-footer-info">
+                                        <button class="btn-read-more">Read more <i class="bi bi-arrow-right"></i></button>
+                                        <div class="post-meta"><span class="meta-item"><i class="bi bi-clock"></i> 7 min</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <button class="btn-load-more" id="loadMoreBtn">
+                        <i class="bi bi-arrow-down-circle"></i>
+                        Load previous posts
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <img src="../img/home/perro.png" alt="Decoration" class="footer-decoration">
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../javascript/blog.js"></script>
+</body>
+</html>

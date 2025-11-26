@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Did You Miss This? - Moon Clouday</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/do-you-miss.css">
+     <link rel="icon" type="image/png" href="../img/stickers_blog/star.png" sizes="32x32">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container text-center" data-aos="fade-down">
+                <img src="../img/home/logo.png" alt="Moon Clouday" class="logo-img">
+            </div>
+            
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/home-EN.html">
+                                    <i class="bi bi-house-fill"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about-EN.html">
+                                    <i class="bi bi-person-fill"></i>
+                                    About
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/blog-EN.html">
+                                    <i class="bi bi-journal-text"></i>
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/contact-EN.html">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Page Header -->
+            <div class="page-header text-center" data-aos="fade-up">
+                <span class="page-badge">
+                    <i class="bi bi-newspaper"></i>
+                    News & Trends
+                </span>
+                <h1 class="page-title">Did You Miss This?</h1>
+                <p class="page-subtitle">The latest news from the design world you can't miss!</p>
+            </div>
+
+            <!-- Featured News - Destaque da Semana -->
+            <section class="featured-section" data-aos="fade-up">
+                <div class="featured-badge">
+                    <i class="bi bi-star-fill"></i>
+                    Featured This Week
+                </div>
+                
+                <div class="featured-card">
+                    <div class="row g-0 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="featured-image">
+                                <span class="featured-tag">TRENDING</span>
+                                <img src="../img/didyoumiss/kpopalbum.jpg" alt="K-pop Album Design" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="featured-content">
+                                <span class="featured-category">
+                                    <i class="bi bi-tag-fill"></i>
+                                    Design & Culture
+                                </span>
+                                <h2 class="featured-title">K-pop redefines physical album design: Western fans now demand more than just a simple CD</h2>
+                                <p class="featured-description">In recent years, the global music industry went through an unexpected change: the packaging design revolution led by K-pop. While Western artists released basic and minimalist CDs, K-pop groups began offering true collectible experiences — elaborate photobooks, photocards, posters, stickers, multiple visual concepts and special editions carefully planned for each comeback.</p>
+                                <div class="featured-meta">
+                                    <span><i class="bi bi-calendar3"></i> Nov 20, 2025</span>
+                                    <span><i class="bi bi-clock"></i> 8 min read</span>
+                                </div>
+                                <a href="../html/kpop-article-EN.html" class="btn-read-more">
+                                    Read More
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Filter Tabs -->
+            <section class="filter-section" data-aos="fade-up">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <i class="bi bi-grid-fill"></i>
+                        All
+                    </button>
+                    <button class="filter-tab" data-filter="design">
+                        <i class="bi bi-palette-fill"></i>
+                        Design
+                    </button>
+                    <button class="filter-tab" data-filter="culture">
+                        <i class="bi bi-globe"></i>
+                        Culture
+                    </button>
+                    <button class="filter-tab" data-filter="trends">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        Trends
+                    </button>
+                    <button class="filter-tab" data-filter="tech">
+                        <i class="bi bi-cpu-fill"></i>
+                        Technology
+                    </button>
+                </div>
+            </section>
+
+            <!-- News Grid -->
+            <section class="news-grid-section">
+                <div class="row g-4">
+                    
+                    <!-- News Card 1 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-category="design">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/vhs.jpg" alt="Typography VHS to TikTok" class="img-fluid">
+                                <span class="news-badge badge-purple">Design</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 18, 2025
+                                </span>
+                                <h3 class="news-title">From VHS to TikTok: how subtitle font design shapes audiovisual aesthetics</h3>
+                                <p class="news-excerpt">Typography has always been present in audiovisual media, but few people notice how it evolved alongside technology. From the iconic yellow subtitles of the 90s to the current boom of bold fonts on TikTok.</p>
+                                <a href="../html/vhs-article-EN.html" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 2 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-category="tech">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/cosmeticos.jpg" alt="Cosmetic Packaging" class="img-fluid">
+                                <span class="news-badge badge-green">Technology</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 15, 2025
+                                </span>
+                                <h3 class="news-title">How cosmetic packaging design became science fiction without anyone noticing</h3>
+                                <p class="news-excerpt">From magnetic caps to materials that change color with light, the beauty sector is adopting technologies worthy of futuristic movies.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 3 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-category="trends">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/fastfood.jpg" alt="Fast Food Design" class="img-fluid">
+                                <span class="news-badge badge-orange">Trends</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 12, 2025
+                                </span>
+                                <h3 class="news-title">Why are fast-food restaurants changing their visual identity at the same time?</h3>
+                                <p class="news-excerpt">Almost all global chains abandoned bright red and migrated to neutral, minimalist and "Instagrammable" tones. The "calm" aesthetic dominating 2025.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 4 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-category="design">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/handmade.jpg" alt="Handmade Design" class="img-fluid">
+                                <span class="news-badge badge-purple">Design</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 10, 2025
+                                </span>
+                                <h3 class="news-title">The return of "handmade": why handcrafted aesthetics is winning the digital age</h3>
+                                <p class="news-excerpt">Tired of the cold perfection of filters and algorithms, designers worldwide are returning to manual techniques — embroidery, woodcut, ceramics, calligraphy and even analog collage.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 5 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-category="culture">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/maximalismolatino.jpg" alt="Latin Maximalism" class="img-fluid">
+                                <span class="news-badge badge-pink">Culture</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 08, 2025
+                                </span>
+                                <h3 class="news-title">Tropical maximalism: how Latin American aesthetics is conquering global design</h3>
+                                <p class="news-excerpt">Saturated colors, folkloric motifs, giant embroidery, muralism and a delicious mix of chaos and rhythm — Latin maximalism is back with force.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 6 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-category="culture">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/grafitti.jpg" alt="Urban Muralism" class="img-fluid">
+                                <span class="news-badge badge-pink">Culture</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 05, 2025
+                                </span>
+                                <h3 class="news-title">Urban muralism as manifesto: São Paulo and Mexico City influence new editorial design</h3>
+                                <p class="news-excerpt">The aesthetics of walls — layers, textures, stencil, dirty graffiti, spontaneous collages — is invading magazines, book covers, music videos and digital interfaces.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 7 -->
+                    <div class="col-lg-4 col-md-6" data-aos="fade-up" data-category="trends">
+                        <div class="news-card">
+                            <div class="news-image">
+                                <img src="../img/didyoumiss/AntiTechAesthetic.jpg" alt="Anti-Tech Aesthetic" class="img-fluid">
+                                <span class="news-badge badge-orange">Trends</span>
+                            </div>
+                            <div class="news-content">
+                                <span class="news-date">
+                                    <i class="bi bi-calendar3"></i>
+                                    Nov 02, 2025
+                                </span>
+                                <h3 class="news-title">The rise of "anti-tech aesthetic": when design decides to slow down</h3>
+                                <p class="news-excerpt">Full schedule, screen overload, digital burnout... all of this drove an aesthetic wave that rejects futurism and embraces the analog.</p>
+                                <a href="#" class="news-link">
+                                    Read more
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Load More Button -->
+            <div class="load-more-section text-center" data-aos="fade-up">
+                <button class="btn-load-more" id="loadMoreBtn">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    See Previous News
+                </button>
+            </div>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section" data-aos="fade-up">
+                <div class="newsletter-box">
+                    <div class="newsletter-icon">
+                        <i class="bi bi-envelope-heart-fill"></i>
+                    </div>
+                    <h3>Don't miss any news!</h3>
+                    <p>Receive the latest trends and news from the design world directly in your email.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="your@email.com" required>
+                            <button type="submit" class="btn btn-newsletter">
+                                Subscribe
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <img src="../img/home/perro.png" alt="Decoration" class="footer-decoration">
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../javascript/Do-you-miss.js"></script>
+</body>
+</html>

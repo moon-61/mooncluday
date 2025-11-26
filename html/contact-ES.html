@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Moon Cloudsy</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/contact.css">
+     <link rel="icon" type="image/png" href="../img/stickers_blog/star.png" sizes="32x32">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-section">
+        <div class="container">
+            <!-- Logo -->
+            <div class="logo-container text-center" data-aos="fade-down">
+                <img src="../img/home/logo.png" alt="Moon Cloudsy" class="logo-img">
+            </div>
+            
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/home-ES.html">
+                                    <i class="bi bi-house-fill"></i>
+                                    Inicio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/about-ES.html">
+                                    <i class="bi bi-person-fill"></i>
+                                    Sobre mí
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../html/blog-ES.html">
+                                    <i class="bi bi-journal-text"></i>
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../html/contact-ES.html">
+                                    <i class="bi bi-envelope-fill"></i>
+                                    Contacto
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="contact-main">
+        <div class="container">
+            
+            <div class="page-title text-center">
+                <h1>¡Ponte en contacto!</h1>
+            </div>
+
+            <div class="row g-4">
+                
+                <!-- Social Media Section -->
+                <div class="col-lg-5">
+                    <div class="social-section">
+                        <h2>¡Conéctate conmigo!</h2>
+                        <p class="social-description">Sígueme en las redes sociales y mantente al día de todo.</p>
+                        
+                        <div class="social-links">
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/https.moon.61" target="_blank" class="social-link instagram">
+                                <i class="bi bi-instagram"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Instagram</span>
+                                    <span class="social-handle">@https.moon.61</span>
+                                </div>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="www.linkedin.com/in/claudia-rojas-aramayo" target="_blank" class="social-link linkedin">
+                                <i class="bi bi-linkedin"></i>
+                                <div class="social-info">
+                                    <span class="social-name">LinkedIn</span>
+                                    <span class="social-handle">Claudia Rojas</span>
+                                </div>
+                            </a>
+
+                            <!-- GitHub -->
+                            <a href="https://github.com/moon-61" target="_blank" class="social-link github">
+                                <i class="bi bi-github"></i>
+                                <div class="social-info">
+                                    <span class="social-name">GitHub</span>
+                                    <span class="social-handle">@moon-61</span>
+                                </div>
+                            </a>
+
+                            <!-- Behance -->
+                            <a href="https://www.behance.net/clau_r61" target="_blank" class="social-link behance">
+                                <i class="bi bi-behance"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Behance</span>
+                                    <span class="social-handle">Claudia Rojas</span>
+                                </div>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="claudia.rojas.aramayo@gmail.com" class="social-link email">
+                                <i class="bi bi-envelope-fill"></i>
+                                <div class="social-info">
+                                    <span class="social-name">Correo</span>
+                                    <span class="social-handle">claudia.rojas.aramayo@gmail.com</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Section -->
+                <div class="col-lg-7">
+                    <div class="form-section">
+                        <h2>Envía un mensaje</h2>
+                        <p class="form-description">Rellena el formulario a continuación y me pondré en contacto contigo pronto.</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <!-- Nombre -->
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+
+                            <!-- Asunto -->
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+
+                            <!-- Mensaje -->
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+
+                            <!-- Botón -->
+                            <button type="submit" class="btn btn-submit">
+                                <span class="btn-text">Enviar mensaje</span>
+                                <i class="bi bi-send-fill"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <img src="../img/home/perro.png" alt="Decoración" class="footer-decoration">
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content success-modal">
+                <div class="modal-body text-center">
+                    <div class="success-icon">
+                        <i class="bi bi-check-circle-fill"></i>
+                    </div>
+                    <h3>¡Mensaje enviado!</h3>
+                    <p>Gracias por ponerte en contacto. ¡Responderé pronto!</p>
+                    <button type="button" class="btn btn-success-ok" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="../javascript/contact.js"></script>
+</body>
+</html>
