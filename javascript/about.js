@@ -100,20 +100,23 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(badge);
     });
     
-    // Efecto parallax suave en las imágenes principales
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        
-        const authorImage = document.querySelector('.author-image');
-        if (authorImage) {
-            authorImage.style.transform = `translateY(${scrolled * 0.1}px)`;
-        }
-        
-        const purposeImage = document.querySelector('.purpose-image');
-        if (purposeImage) {
-            purposeImage.style.transform = `translateY(${scrolled * 0.08}px)`;
-        }
-    });
+    // CORREGIDO: Efecto parallax SOLO en desktop (no en móvil)
+    // Solo activar si la pantalla es mayor a 992px (tablet/desktop)
+    if (window.innerWidth > 992) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            
+            const authorImage = document.querySelector('.author-image');
+            if (authorImage) {
+                authorImage.style.transform = `translateY(${scrolled * 0.05}px)`;
+            }
+            
+            const purposeImage = document.querySelector('.purpose-image');
+            if (purposeImage) {
+                purposeImage.style.transform = `translateY(${scrolled * 0.03}px)`;
+            }
+        });
+    }
     
     // Efecto de hover mejorado en las imágenes de la galería
     galleryItems.forEach(item => {
@@ -148,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const timer = setInterval(() => {
             start += increment;
-            if (start >= target) {0
+            if (start >= target) {
                 element.textContent = Math.floor(target);
                 clearInterval(timer);
             } else {

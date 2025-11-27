@@ -154,6 +154,8 @@ body {
     position: relative;
     z-index: 2;
     background: #f0f0f0;
+    /* CORREGIDO: Asegurar que no se mueva en móvil */
+    will-change: transform;
 }
 
 .image-decoration {
@@ -252,8 +254,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* CORREGIDO: Altura mínima para evitar colapso */
+    min-height: 400px;
 }
 
+/* CORREGIDO: Imagen purpose sin parallax excesivo */
 .purpose-image {
     width: 100%;
     max-width: 450px;
@@ -264,6 +269,8 @@ body {
     position: relative;
     z-index: 2;
     background: #f0f0f0;
+    /* IMPORTANTE: Evitar que el parallax mueva demasiado */
+    will-change: transform;
 }
 
 .decoration-3 {
@@ -568,6 +575,12 @@ body {
     .decoration-4 {
         display: none;
     }
+    
+    /* CORREGIDO: Ajustar wrapper en tablets */
+    .purpose-image-wrapper {
+        min-height: 350px;
+        margin-bottom: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -594,9 +607,23 @@ body {
         padding: 40px 20px;
     }
     
+    /* CORREGIDO PARA MÓVIL: Sin parallax, imagen centrada */
     .author-image,
     .purpose-image {
         margin-bottom: 30px;
+        /* IMPORTANTE: Resetear transform en móvil */
+        transform: none !important;
+    }
+    
+    /* CORREGIDO: Wrapper más pequeño en móvil */
+    .purpose-image-wrapper {
+        min-height: auto;
+        margin-bottom: 30px;
+    }
+    
+    .purpose-image {
+        height: 400px;
+        max-width: 100%;
     }
     
     .purpose-item {
@@ -639,5 +666,14 @@ body {
     
     .cta-content h2 {
         font-size: 1.5rem;
+    }
+    
+    /* CORREGIDO: Imagen más pequeña en pantallas pequeñas */
+    .purpose-image {
+        height: 350px;
+    }
+    
+    .author-image {
+        height: 400px;
     }
 }
