@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -473,12 +472,14 @@ body {
     font-size: 1.3rem;
 }
 
-/* Illustration */
+/* Illustration - CORREGIDO PARA IPHONE */
 .illustration-wrapper {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 450px;
+    width: 100%;
 }
 
 .illustration-decoration {
@@ -496,18 +497,25 @@ body {
     50% { transform: scale(1.1); }
 }
 
+/* CORREGIDO: Imagen de ilustración sin parallax, solo hover */
 .illustration-image {
     width: 100%;
     max-width: 450px;
     height: auto;
     position: relative;
     z-index: 2;
+    display: block;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+    /* IMPORTANTE: Solo transition en transform para el hover */
     transition: transform 0.3s ease;
+    /* IMPORTANTE: Transform inicial en none para evitar movimientos */
+    transform: none;
+    will-change: transform;
 }
 
+/* Solo se agranda al hacer hover */
 .illustration-image:hover {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.05) !important;
 }
 
 /* About Card Modern */
@@ -784,6 +792,21 @@ body {
     .hero-image-wrapper {
         margin-bottom: 40px;
     }
+    
+    /* CORREGIDO: Asegurar que la imagen aparezca en tablets */
+    .illustration-wrapper {
+        margin-top: 40px;
+        min-height: 350px;
+    }
+    
+    .illustration-image {
+        max-width: 350px;
+    }
+    
+    .illustration-decoration {
+        width: 350px;
+        height: 350px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -824,5 +847,42 @@ body {
     
     .footer-decoration {
         width: 100px;
+    }
+    
+    /* CORREGIDO PARA IPHONE: Asegurar visibilidad en móviles */
+    .illustration-wrapper {
+        margin-top: 40px;
+        min-height: 300px;
+        padding: 20px;
+    }
+    
+    .illustration-image {
+        max-width: 100%;
+        width: 300px;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .illustration-decoration {
+        width: 280px;
+        height: 280px;
+    }
+}
+
+
+@media (max-width: 390px) {
+    .illustration-wrapper {
+        min-height: 250px;
+    }
+    
+    .illustration-image {
+        width: 250px;
+        max-width: 100%;
+    }
+    
+    .illustration-decoration {
+        width: 230px;
+        height: 230px;
     }
 }
