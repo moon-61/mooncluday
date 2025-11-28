@@ -1,6 +1,4 @@
-/* ============================================
-   RESET & VARIABLES
-   ============================================ */
+
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +35,6 @@ body {
     min-height: 100vh;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
 .header-section {
     padding: 20px 0 0 0;
 }
@@ -58,9 +53,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
 .custom-navbar {
     background: var(--color-green);
     padding: 15px 0;
@@ -103,9 +95,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ============================================
-   PAGE HEADER
-   ============================================ */
 .page-header {
     padding: 60px 20px 40px;
     text-align: center;
@@ -146,9 +135,6 @@ body {
     font-weight: 500;
 }
 
-/* ============================================
-   CONTENT SECTIONS
-   ============================================ */
 .main-content {
     padding: 40px 0 60px;
     max-width: 1400px;
@@ -201,9 +187,6 @@ body {
     position: relative;
 }
 
-/* ============================================
-   CONTENT CARDS
-   ============================================ */
 .content-card {
     background: white;
     padding: 35px;
@@ -273,9 +256,6 @@ body {
     margin-right: 8px;
 }
 
-/* ============================================
-   IMAGE CARDS
-   ============================================ */
 .image-wrapper {
     display: flex;
     justify-content: center;
@@ -347,9 +327,6 @@ body {
     transform: rotate(0deg) translateY(-8px);
 }
 
-/* ============================================
-   STICKER SPACES
-   ============================================ */
 .sticker-space {
     position: absolute;
     width: 150px;
@@ -367,7 +344,6 @@ body {
     object-fit: contain;
 }
 
-/* Posiciones específicas */
 .sticker-header {
     top: -60px;
     right: 5%;
@@ -402,7 +378,6 @@ body {
     right: -60px;
     width: 160px;
     height: 160px;
-    /* animation removed to reduce continuous GPU work */
 }
 
 .sticker-float-left {
@@ -410,7 +385,6 @@ body {
     left: -60px;
     width: 160px;
     height: 160px;
-    /* animation removed to reduce continuous GPU work */
 }
 
 .sticker-divider {
@@ -433,7 +407,6 @@ body {
     right: 12%;
     width: 200px;
     height: 200px;
-    /* animation removed to reduce continuous GPU work */
 }
 
 @keyframes floatSticker {
@@ -445,9 +418,6 @@ body {
     }
 }
 
-/* ============================================
-   SECTION DIVIDER
-   ============================================ */
 .section-divider {
     position: relative;
     margin: 80px 0;
@@ -456,9 +426,6 @@ body {
     background: linear-gradient(90deg, transparent, var(--color-purple-dark) 20%, var(--color-purple-dark) 80%, transparent);
 }
 
-/* ============================================
-   PDF CONTAINER
-   ============================================ */
 .pdf-container {
     background: white;
     padding: 25px;
@@ -495,9 +462,6 @@ body {
     border-radius: 12px;
 }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
 .figma-button-container {
     display: flex;
     justify-content: center;
@@ -560,9 +524,6 @@ body {
     transform: translate(3px, -3px);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
 .footer-section {
     background: var(--color-blue);
     height: 150px;
@@ -580,7 +541,6 @@ body {
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
-    /* animation removed to reduce continuous GPU work */
 }
 
 @keyframes footerBounce {
@@ -592,9 +552,6 @@ body {
     }
 }
 
-/* ============================================
-   MODAL
-   ============================================ */
 #imageModal .modal-content {
     background: white;
     border-radius: 20px;
@@ -629,9 +586,6 @@ body {
     color: #555;
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;

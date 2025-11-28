@@ -1,6 +1,3 @@
-/* ============================================
-   RESET & VARIABLES
-   ============================================ */
 * {
     margin: 0;
     padding: 0;
@@ -37,9 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================
-   HEADER
-   ============================================ */
 .header-section {
     padding: 20px 0 0 0;
 }
@@ -58,9 +52,6 @@ body {
     transform: scale(1.05);
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
 .custom-navbar {
     background: var(--color-green);
     padding: 15px 0;
@@ -103,9 +94,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* ============================================
-   STICKERS DECORATIVOS
-   ============================================ */
 .sticker-decoration {
     position: fixed;
     width: 150px;
@@ -168,18 +156,12 @@ body {
     }
 }
 
-/* ============================================
-   MAIN CONTENT
-   ============================================ */
 .main-content {
     padding: 40px 0 60px;
     max-width: 900px;
     margin: 0 auto;
 }
 
-/* ============================================
-   BREADCRUMB
-   ============================================ */
 .breadcrumb-custom {
     display: flex;
     align-items: center;
@@ -213,9 +195,6 @@ body {
     font-weight: 600;
 }
 
-/* ============================================
-   POST HEADER
-   ============================================ */
 .post-article {
     background: white;
     border-radius: 25px;
@@ -331,9 +310,6 @@ body {
     color: var(--color-orange);
 }
 
-/* ============================================
-   FEATURED IMAGE
-   ============================================ */
 .post-featured-image {
     margin: 40px 0;
     border-radius: 15px;
@@ -347,9 +323,6 @@ body {
     display: block;
 }
 
-/* ============================================
-   POST CONTENT
-   ============================================ */
 .post-content {
     line-height: 1.8;
     color: #333;
@@ -405,9 +378,6 @@ body {
     font-weight: 700;
 }
 
-/* ============================================
-   CUSTOM LIST
-   ============================================ */
 .custom-list {
     list-style: none;
     padding: 0;
@@ -430,9 +400,6 @@ body {
     font-size: 1.3rem;
 }
 
-/* ============================================
-   HIGHLIGHT BOX
-   ============================================ */
 .highlight-box {
     background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(255, 179, 102, 0.1));
     border: 3px dashed var(--color-orange);
@@ -470,9 +437,6 @@ body {
     font-size: 1.05rem;
 }
 
-/* ============================================
-   QUOTE BOX
-   ============================================ */
 .quote-box {
     position: relative;
     background: rgba(163, 207, 217, 0.1);
@@ -507,9 +471,6 @@ body {
     margin: 0;
 }
 
-/* ============================================
-   IMAGE GRID
-   ============================================ */
 .image-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -532,9 +493,6 @@ body {
     font-style: italic;
 }
 
-/* ============================================
-   INFO CARDS
-   ============================================ */
 .info-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -598,9 +556,6 @@ body {
     margin: 0;
 }
 
-/* ============================================
-   CONCLUSION & HANDWRITTEN NOTE
-   ============================================ */
 .conclusion-block {
     padding: 30px;
     background: rgba(179, 191, 84, 0.05);
@@ -627,9 +582,6 @@ body {
     vertical-align: middle;
 }
 
-/* ============================================
-   POST FOOTER
-   ============================================ */
 .post-footer {
     margin-top: 50px;
     padding-top: 40px;
@@ -716,9 +668,6 @@ body {
     background: #25D366;
 }
 
-/* ============================================
-   AUTHOR BOX
-   ============================================ */
 .author-box {
     background: white;
     border: 3px dashed var(--color-green);
@@ -789,9 +738,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* ============================================
-   RELATED POSTS
-   ============================================ */
 .related-posts {
     margin: 50px 0;
 }
@@ -879,9 +825,6 @@ body {
     color: #999;
 }
 
-/* ============================================
-   BACK TO BLOG
-   ============================================ */
 .back-to-blog {
     text-align: center;
     margin: 50px 0;
@@ -910,9 +853,6 @@ body {
     transform: translateX(-5px);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
 .footer-section {
     background: var(--color-blue);
     height: 150px;
@@ -941,9 +881,6 @@ body {
     }
 }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;

@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
         
-        // Simular una petición al servidor (puedes reemplazar esto con tu API real)
+        // Simular una petición al servidor
         setTimeout(() => {
             const mailtoLink = `mailto:claudia.rojas.aramayo@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`Nome: ${data.name}\nEmail: ${data.email}\n\nMensagem:\n${data.message}`)}`;
             window.location.href = mailtoLink;

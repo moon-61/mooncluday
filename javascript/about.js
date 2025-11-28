@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Smooth scroll para los links de navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -15,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         block: 'start'
                     });
                     
-                    // Cerrar el navbar en móvil después de hacer click
                     const navbarCollapse = document.querySelector('.navbar-collapse');
                     if (navbarCollapse.classList.contains('show')) {
                         const bsCollapse = new bootstrap.Collapse(navbarCollapse);
@@ -39,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Animación de entrada para elementos
+    // Animación de entrada 
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -55,7 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Aplicar animación a las tarjetas de info
     const infoCards = document.querySelectorAll('.info-card');
     infoCards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -64,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(card);
     });
     
-    // Aplicar animación a los items de propósito
     const purposeItems = document.querySelectorAll('.purpose-item');
     purposeItems.forEach((item, index) => {
         item.style.opacity = '0';
@@ -73,7 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(item);
     });
     
-    // Aplicar animación a las skill cards
     const skillCards = document.querySelectorAll('.skill-card');
     skillCards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -82,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(card);
     });
     
-    // Aplicar animación a los items de la galería
     const galleryItems = document.querySelectorAll('.gallery-item');
     galleryItems.forEach((item, index) => {
         item.style.opacity = '0';
@@ -91,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(item);
     });
     
-    // Animación de contador para los tool badges
     const toolBadges = document.querySelectorAll('.tool-badge');
     toolBadges.forEach((badge, index) => {
         badge.style.opacity = '0';
@@ -99,9 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
         badge.style.transition = `all 0.4s ease ${index * 0.05}s`;
         fadeInObserver.observe(badge);
     });
-    
-    // CORREGIDO: Efecto parallax SOLO en desktop (no en móvil)
-    // Solo activar si la pantalla es mayor a 992px (tablet/desktop)
     if (window.innerWidth > 992) {
         window.addEventListener('scroll', function() {
             const scrolled = window.pageYOffset;
@@ -118,7 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Efecto de hover mejorado en las imágenes de la galería
     galleryItems.forEach(item => {
         const img = item.querySelector('.gallery-image');
         
@@ -131,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animación del título principal
     const mainTitle = document.querySelector('.main-title');
     if (mainTitle) {
         mainTitle.style.opacity = '0';
@@ -143,8 +131,6 @@ document.addEventListener('DOMContentLoaded', function() {
             mainTitle.style.transform = 'translateY(0)';
         }, 200);
     }
-    
-    // Contador animado para estadísticas (opcional - puedes agregar stats)
     function animateCounter(element, target, duration) {
         let start = 0;
         const increment = target / (duration / 16);
@@ -160,13 +146,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 16);
     }
     
-    // Click para copiar email (si tienes uno visible)
     const emailElements = document.querySelectorAll('[data-email]');
     emailElements.forEach(elem => {
         elem.addEventListener('click', function() {
             const email = this.getAttribute('data-email');
             navigator.clipboard.writeText(email).then(() => {
-                // Mostrar tooltip o feedback
                 const originalText = this.textContent;
                 this.textContent = 'Email copiado!';
                 setTimeout(() => {
@@ -176,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Efecto de escritura para el subtitle (opcional)
     const subtitle = document.querySelector('.hero-subtitle');
     if (subtitle) {
         const text = subtitle.textContent;
@@ -194,8 +177,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(typeWriter, 1000);
     }
-    
-    // Añadir clase active a los items del propósito al hacer scroll
     const missionBox = document.querySelector('.mission-box');
     if (missionBox) {
         missionBox.style.opacity = '0';
@@ -204,7 +185,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fadeInObserver.observe(missionBox);
     }
     
-    // Log para debugging
     console.log('About page loaded successfully! 🎨');
     
 });

@@ -34,7 +34,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Header */
 .header-section {
     padding: 20px 0 0 0;
 }
@@ -53,7 +52,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Navbar */
 .custom-navbar {
     background: var(--color-green);
     padding: 15px 0;
@@ -96,7 +94,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Language Selector */
 .language-selector {
     position: fixed;
     top: 20px;
@@ -171,7 +168,7 @@ body {
 .lang-flag {
     font-size: 1.3rem;
 }
-/* Hero Section */
+
 .hero-section {
     padding: 80px 0;
 }
@@ -242,8 +239,6 @@ body {
 .image-badge i {
     font-size: 1.3rem;
 }
-
-/* Hero Cards */
 .hero-cards-wrapper {
     padding: 20px;
 }
@@ -406,8 +401,6 @@ body {
     background: white;
     transform: translateX(5px);
 }
-
-/* Content Section */
 .content-section {
     padding: 100px 0;
 }
@@ -472,7 +465,6 @@ body {
     font-size: 1.3rem;
 }
 
-/* Illustration - CORREGIDO PARA IPHONE */
 .illustration-wrapper {
     position: relative;
     display: flex;
@@ -497,7 +489,6 @@ body {
     50% { transform: scale(1.1); }
 }
 
-/* CORREGIDO: Imagen de ilustración sin parallax, solo hover */
 .illustration-image {
     width: 100%;
     max-width: 450px;
@@ -506,19 +497,15 @@ body {
     z-index: 2;
     display: block;
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
-    /* IMPORTANTE: Solo transition en transform para el hover */
     transition: transform 0.3s ease;
-    /* IMPORTANTE: Transform inicial en none para evitar movimientos */
     transform: none;
     will-change: transform;
 }
 
-/* Solo se agranda al hacer hover */
 .illustration-image:hover {
     transform: scale(1.05) !important;
 }
 
-/* About Card Modern */
 .about-card-section {
     padding: 80px 0;
 }
@@ -671,7 +658,6 @@ body {
     color: white;
 }
 
-/* Newsletter Section */
 .newsletter-section {
     padding: 60px 0;
 }
@@ -727,7 +713,6 @@ body {
     transform: scale(1.05);
 }
 
-/* Footer */
 .footer-section {
     background: var(--color-blue);
     height: 150px;
@@ -751,7 +736,6 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-/* Accessibility focus states */
 :focus-visible {
     outline: 3px solid var(--color-purple-dark);
     outline-offset: 2px;
@@ -764,7 +748,6 @@ body {
     outline-offset: 2px;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;
@@ -793,7 +776,6 @@ body {
         margin-bottom: 40px;
     }
     
-    /* CORREGIDO: Asegurar que la imagen aparezca en tablets */
     .illustration-wrapper {
         margin-top: 40px;
         min-height: 350px;
@@ -849,7 +831,6 @@ body {
         width: 100px;
     }
     
-    /* CORREGIDO PARA IPHONE: Asegurar visibilidad en móviles */
     .illustration-wrapper {
         margin-top: 40px;
         min-height: 300px;

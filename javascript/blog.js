@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Inicializar AOS
     AOS.init({
         duration: 600,
         easing: 'ease-out',
         once: true,
         offset: 50
     });
-
-    // Ensure favicon (site-wide for blog pages)
     (function ensureFavicon() {
         if (!document.querySelector('link[rel*="icon"]')) {
             const link = document.createElement('link');
@@ -20,14 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
-    // Normalize document title occurrences of "moon cloudsy" -> "Moon Clouday"
-    (function normalizeTitle() {
-        if (document.title) {
-            document.title = document.title.replace(/moon\s*clouds?y?/ig, 'Moon Clouday');
-        }
-    })();
-
-    // Inject focus-visible styles to improve keyboard accessibility on blog pages
     (function injectFocusStyles() {
         const style = document.createElement('style');
         style.textContent = `
@@ -50,17 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const loadMoreBtn = document.getElementById('loadMoreBtn');
     
     let currentOrder = 'newest';
-    let postsLoaded = 4; // Posts inicialmente visibles (Nov, Oct, Sep, Ago)
-    const postsPerLoad = 3; // Posts a cargar por click
-    
-    // Toggle del dropdown
+    let postsLoaded = 4; 
+    const postsPerLoad = 3; 
     orderBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         dropdownMenu.classList.toggle('active');
         orderBtn.classList.toggle('active');
     });
-    
-    // Cerrar dropdown al hacer click fuera
     document.addEventListener('click', function(e) {
         if (!orderBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
             dropdownMenu.classList.remove('active');
@@ -68,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Función para ordenar los posts
     function sortPosts(order) {
         const allPosts = Array.from(blogPosts.querySelectorAll('.blog-card:not(.coming-soon)'));
         const comingSoon = blogPosts.querySelector('.blog-card.coming-soon');
@@ -84,16 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 return dateA - dateB;
             }
         });
-        
-        // Animar salida
         blogPosts.style.opacity = '0';
         blogPosts.style.transform = 'translateY(20px)';
         
         setTimeout(() => {
             // Limpiar contenedor
             blogPosts.innerHTML = '';
-            
-            // Si es "más reciente", el coming soon va primero
             if (order === 'newest' && comingSoon) {
                 blogPosts.appendChild(comingSoon);
             }
@@ -109,20 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (order === 'oldest' && comingSoon) {
                 blogPosts.appendChild(comingSoon);
             }
-            
-            // Animar entrada
             blogPosts.style.opacity = '1';
             blogPosts.style.transform = 'translateY(0)';
-            
-            // Reiniciar AOS
             AOS.refresh();
-            
-            // Actualizar visibilidad de posts
             updatePostsVisibility();
         }, 300);
     }
-    
-    // Función para actualizar visibilidad de posts
     function updatePostsVisibility() {
         const allPosts = blogPosts.querySelectorAll('.blog-card:not(.coming-soon)');
         let visibleCount = 0;
@@ -137,8 +108,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 post.style.display = 'none';
             }
         });
-        
-        // Mostrar/ocultar botón de cargar más
         if (visibleCount >= allPosts.length) {
             loadMoreBtn.classList.add('hidden');
             loadMoreBtn.style.display = 'none';
@@ -147,8 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
             loadMoreBtn.style.display = 'inline-flex';
         }
     }
-    
-    // Event listeners para los items del dropdown
     dropdownItems.forEach(item => {
         item.addEventListener('click', function() {
             const order = this.dataset.order;
@@ -161,29 +128,20 @@ document.addEventListener('DOMContentLoaded', function() {
             
             dropdownMenu.classList.remove('active');
             orderBtn.classList.remove('active');
-            
-            // Feedback visual
             orderBtn.style.transform = 'scale(1.05)';
             setTimeout(() => {
                 orderBtn.style.transform = 'scale(1)';
             }, 200);
         });
     });
-    
-    // Load More Button - FUNCIONAL
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', function() {
             const originalHTML = this.innerHTML;
-            
-            // Animación de carga
             this.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Carregando...';
             this.disabled = true;
             
             setTimeout(() => {
-                // Incrementar posts cargados
                 postsLoaded += postsPerLoad;
-                
-                // Mostrar posts ocultos con animación
                 const hiddenPosts = blogPosts.querySelectorAll('.blog-card.hidden-post');
                 let revealed = 0;
                 
@@ -193,8 +151,6 @@ document.addEventListener('DOMContentLoaded', function() {
                         post.style.display = '';
                         post.style.opacity = '0';
                         post.style.transform = 'translateY(30px)';
-                        
-                        // Animación escalonada
                         setTimeout(() => {
                             post.style.transition = 'all 0.5s ease';
                             post.style.opacity = '1';
@@ -205,14 +161,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
                 
-                // Actualizar visibilidad
                 updatePostsVisibility();
-                
-                // Restaurar botón
                 this.innerHTML = originalHTML;
                 this.disabled = false;
-                
-                // Scroll suave a los nuevos posts
                 if (revealed > 0) {
                     const newlyVisible = blogPosts.querySelectorAll('.blog-card:not(.hidden-post):not(.coming-soon)');
                     const lastVisible = newlyVisible[newlyVisible.length - postsPerLoad];
@@ -222,15 +173,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         }, 500);
                     }
                 }
-                
-                // Reiniciar AOS
                 AOS.refresh();
                 
             }, 800);
         });
     }
-    
-    // Botón "Leer más" ahora navega en la MISMA pestaña (para <button> o <a>)
     document.addEventListener('click', function(e) {
         const trigger = e.target.closest('.btn-read-more');
         if (!trigger) return;
@@ -243,18 +190,13 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             trigger.style.transform = 'scale(1)';
         }, 150);
-
-        // Si es un enlace con href válido, dejamos que el navegador navegue normalmente en la misma pestaña
         const directHref = trigger.getAttribute('href');
         if (directHref && directHref !== '#') {
-            // No prevenimos el default para que respete focus/estilos; pero
-            // si queremos forzar via JS y evitar posibles scrolls, descomenta:
             e.preventDefault();
             window.location.href = directHref;
             return;
         }
 
-        // Si es un botón (sin href), resolvemos la URL por fecha conocida
         e.preventDefault();
         const knownPT = {
             '2025-10': '/html/octuber-PT.html',
@@ -264,14 +206,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const targetUrl = knownPT[month];
         if (targetUrl) {
-            window.location.href = targetUrl; // misma pestaña
+            window.location.href = targetUrl; 
             return;
         }
-
-        // Fallback: contenido aún no disponible
         console.warn('Conteúdo não disponível para:', month);
         try {
-            // Si Bootstrap está presente, podríamos mostrar un toast; por ahora alert minimal
             alert('Conteúdo em breve.');
         } catch (_) {}
     });

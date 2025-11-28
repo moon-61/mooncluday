@@ -1,4 +1,3 @@
-// Base de dados de recursos de design
 const designResources = [
     // Figma
     {
@@ -183,7 +182,6 @@ const designResources = [
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Inicializar AOS
     AOS.init({
         duration: 800,
         easing: 'ease-in-out',
@@ -191,7 +189,6 @@ document.addEventListener('DOMContentLoaded', function() {
         offset: 100
     });
 
-    // Ensure favicon
     (function ensureFavicon() {
         if (!document.querySelector('link[rel*="icon"]')) {
             const link = document.createElement('link');
@@ -203,14 +200,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
-    // Normalize title
     (function normalizeTitle() {
         if (document.title) {
             document.title = document.title.replace(/moon\s*clouds?y?/ig, 'Moon Clouday');
         }
     })();
 
-    // Inject focus-visible styles
     (function injectFocusStyles() {
         const style = document.createElement('style');
         style.textContent = `
@@ -235,12 +230,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultsCount = document.getElementById('resultsCount');
     const searchQuerySpan = document.getElementById('searchQuery');
     
-    // Update placeholder to PT
+    // Update 
     if (searchInput) {
         searchInput.placeholder = 'Ex: como criar uma nova aba no Figma...';
     }
 
-    // Event Listeners
     searchBtn.addEventListener('click', performSearch);
     searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
@@ -248,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Sugestões de busca
+    // Sugerencias de busqueda
     document.querySelectorAll('.suggestion-chip').forEach(chip => {
         chip.addEventListener('click', function() {
             const query = this.getAttribute('data-query');
@@ -300,34 +294,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mostrar resultados
     function displayResults(results, query) {
-        // Ocultar featured section
         featuredSection.style.display = 'none';
         
-        // Mostrar results section
         resultsSection.style.display = 'block';
         
         if (results.length === 0) {
-            // Sem resultados
             resultsGrid.style.display = 'none';
             noResults.style.display = 'block';
             searchQuerySpan.textContent = query;
         } else {
-            // Com resultados
             resultsGrid.style.display = 'grid';
             noResults.style.display = 'none';
             
             resultsTitle.textContent = `Resultados para "${query}"`;
             resultsCount.textContent = `${results.length} resultado${results.length !== 1 ? 's' : ''} encontrado${results.length !== 1 ? 's' : ''}`;
             
-            // Limpar grid
             resultsGrid.innerHTML = '';
-            
-            // Adicionar cards
             results.forEach((result, index) => {
                 const card = createResultCard(result);
                 resultsGrid.appendChild(card);
-                
-                // Animação
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
@@ -335,11 +320,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Scroll suave para os resultados
+        // Scroll suave para los resultados
         resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
     
-    // Criar card de resultado
     function createResultCard(resource) {
         const card = document.createElement('a');
         card.href = resource.url;
@@ -419,8 +403,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Cerrar navbar en móvil
     document.addEventListener('click', function(e) {
         const navbar = document.querySelector('.navbar-collapse');
         const toggler = document.querySelector('.navbar-toggler');
@@ -432,8 +414,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
-    // Navbar shadow on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.custom-navbar');
         
@@ -448,11 +428,3 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log(`%c${designResources.length} recursos disponíveis na base de dados`, 'color: #FF9933; font-size: 12px;');
     
 });
-
-// Função global para limpar busca
-function clearSearch() {
-    document.getElementById('resultsSection').style.display = 'none';
-    document.getElementById('featuredSection').style.display = 'block';
-    document.getElementById('searchInput').value = '';
-    document.getElementById('searchInput').focus();
-}

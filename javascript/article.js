@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
 
     AOS.init({
         duration: 800,
@@ -215,7 +214,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const stickers = document.querySelectorAll('.sticker-decoration');
     
     stickers.forEach((sticker, index) => {
-        // Añadir interactividad al hacer hover
         sticker.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.2) rotate(15deg)';
         });
@@ -223,8 +221,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sticker.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1) rotate(0deg)';
         });
-        
-        // Animación aleatoria de entrada
         setTimeout(() => {
             sticker.style.opacity = '0.9';
         }, 300 * index);
@@ -355,8 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
         '%c🎨 Página de artículo carregada com sucesso!',
         'color: #FF9933; font-size: 12px; font-family: Quicksand, sans-serif; padding: 5px 0;'
     );
-    
-    // Calcular tiempo de lectura
     const content = document.querySelector('.post-content');
     if (content) {
         const words = content.textContent.trim().split(/\s+/).length;

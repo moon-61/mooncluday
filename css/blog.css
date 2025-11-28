@@ -161,7 +161,6 @@ body {
     transform: rotate(180deg);
 }
 
-/* CORREGIDO: z-index más alto para que aparezca sobre las cards */
 .filter-dropdown {
     position: absolute;
     top: calc(100% + 10px);
@@ -174,14 +173,14 @@ body {
     visibility: hidden;
     transform: translateY(-10px);
     transition: all 0.3s;
-    z-index: 9999; /* ← ESTO ES LO IMPORTANTE */
+    z-index: 9999;
 }
 
 .filter-dropdown.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-    z-index: 9999; /* ← Y TAMBIÉN AQUÍ */
+    z-index: 9999; 
 }
 
 .filter-dropdown .dropdown-item {
@@ -246,7 +245,6 @@ body {
     opacity: 1;
 }
 
-/* Coming Soon Card */
 .blog-card.coming-soon {
     position: relative;
     opacity: 0.9;
@@ -295,7 +293,6 @@ body {
     50% { transform: scale(1.1); }
 }
 
-/* Card Image */
 .card-image-wrapper {
     position: relative;
     height: 350px;
@@ -342,7 +339,6 @@ body {
     z-index: 2;
 }
 
-/* Card Content */
 .card-content {
     padding: 35px;
     position: relative;
@@ -380,7 +376,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Card Footer */
 .card-footer-info {
     display: flex;
     justify-content: space-between;
@@ -392,7 +387,7 @@ body {
 .btn-read-more {
     background: linear-gradient(135deg, var(--color-blue), var(--color-purple-dark));
     color: white;
-    text-decoration: none; /* ensure link-styled buttons have no underline */
+    text-decoration: none;
     border: none;
     padding: 12px 30px;
     border-radius: 50px;
@@ -428,7 +423,6 @@ body {
     color: var(--color-purple-dark);
 }
 
-/* Load More Button */
 .btn-load-more {
     background: white;
     color: var(--color-purple-dark);
@@ -456,9 +450,6 @@ body {
     display: none;
 }
 
-/* ================== */
-/*       Footer       */
-/* ================== */
 .footer-section {
     background: var(--color-blue);
     height: 150px;
@@ -482,9 +473,6 @@ body {
     50% { transform: translateY(-10px); }
 }
 
-/* ================== */
-/*     Responsive     */
-/* ================== */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;
@@ -496,7 +484,6 @@ body {
         font-size: 4rem;
     }
 
-    /* CORREGIDO: Centrar filtro en tablets */
     .filter-box {
         margin-top: 20px;
         display: flex;
@@ -509,7 +496,6 @@ body {
         max-width: 150px;
     }
 
-    /* CORREGIDO: Título centrado en móvil */
     .blog-title-wrapper {
         text-align: center;
     }
@@ -529,13 +515,12 @@ body {
         text-align: center;
     }
 
-    /* CORREGIDO: Filtro centrado y con más espacio en móvil */
     .filter-box {
         margin-top: 30px;
         display: flex;
         justify-content: center;
         width: 100%;
-        margin-bottom: 40px; /* ESPACIO EXTRA para que el dropdown no tape content */
+        margin-bottom: 40px; 
     }
 
     .filter-btn {
@@ -544,7 +529,6 @@ body {
         justify-content: center;
     }
 
-    /* CORREGIDO: Dropdown centrado en móvil */
     .filter-dropdown {
         left: 50%;
         right: auto;
@@ -610,7 +594,6 @@ body {
         font-size: 0.95rem;
     }
     
-    /* CORREGIDO: Botón de filtro más pequeño en pantallas muy pequeñas */
     .filter-btn {
         padding: 12px 20px;
         font-size: 0.9rem;

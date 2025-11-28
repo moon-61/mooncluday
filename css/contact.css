@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
 .header-section {
     padding: 20px 0 0 0;
 }
@@ -40,18 +38,17 @@ body {
     height: auto;
 }
 
-/* Navbar */
 .custom-navbar {
     background: #B3BF54;
-    padding: 15px 0; /* uniform navbar height */
+    padding: 15px 0;
     border-radius: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* uniform shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .custom-navbar .navbar-toggler {
     border: 2px solid #768030;
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px; /* uniform toggler size */
+    padding: 8px 12px; 
 }
 
 .custom-navbar .navbar-toggler-icon {
@@ -62,9 +59,9 @@ body {
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     color: #171717;
-    margin: 0 15px; /* uniform spacing */
+    margin: 0 15px;
     font-size: 18px;
-    padding: 10px 20px; /* uniform hit area */
+    padding: 10px 20px; 
     border-radius: 10px;
     transition: all 0.3s;
     display: flex;
@@ -78,7 +75,6 @@ body {
     color: white;
 }
 
-/* Main Content */
 .contact-main {
     padding: 60px 0;
     min-height: calc(100vh - 350px);
@@ -108,7 +104,6 @@ body {
     border-radius: 2px;
 }
 
-/* Social Section */
 .social-section {
     background: white;
     padding: 40px;
@@ -170,7 +165,6 @@ body {
     color: #666;
 }
 
-/* Social Link Colors */
 .social-link.instagram {
     background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
     background-size: 200% 200%;
@@ -251,7 +245,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Form Section */
 .form-section {
     background: white;
     padding: 40px;
@@ -298,7 +291,6 @@ body {
     min-height: 120px;
 }
 
-/* Submit Button */
 .btn-submit {
     background: linear-gradient(135deg, #B882D9, #A3CFD9);
     border: none;
@@ -326,7 +318,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Success Modal */
 .success-modal .modal-content {
     border: none;
     border-radius: 20px;
@@ -385,7 +376,6 @@ body {
     bottom: 0;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;

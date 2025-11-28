@@ -1,4 +1,3 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -26,7 +25,6 @@ body {
     min-height: 100vh;
 }
 
-/* Header */
 .header-section {
     padding: 20px 0 0 0;
 }
@@ -40,18 +38,17 @@ body {
     height: auto;
 }
 
-/* Navbar */
 .custom-navbar {
-    background: #B3BF54; /* same as var(--color-green) */
-    padding: 15px 0; /* uniform navbar height */
+    background: #B3BF54; 
+    padding: 15px 0;
     border-radius: 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* uniform shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .custom-navbar .navbar-toggler {
-    border: 2px solid #768030; /* var(--color-green-dark) */
+    border: 2px solid #768030; 
     background-color: rgba(255, 255, 255, 0.1);
-    padding: 8px 12px; /* uniform toggler size */
+    padding: 8px 12px;
 }
 
 .custom-navbar .navbar-toggler-icon {
@@ -62,9 +59,9 @@ body {
     font-family: 'Urbanist', sans-serif;
     font-weight: 600;
     color: #171717;
-    margin: 0 15px; /* uniform spacing */
-    font-size: 18px; /* uniform font size */
-    padding: 10px 20px; /* uniform hit area */
+    margin: 0 15px; 
+    font-size: 18px; 
+    padding: 10px 20px; 
     border-radius: 10px;
     transition: all 0.3s;
     display: flex;
@@ -78,12 +75,10 @@ body {
     color: white;
 }
 
-/* Main Content */
 .about-main {
     padding: 40px 0;
 }
 
-/* Hero Section */
 .hero-section {
     padding: 60px 0;
 }
@@ -116,7 +111,6 @@ body {
     margin-top: 30px;
 }
 
-/* Section Title */
 .section-title {
     font-family: 'Urbanist', sans-serif;
     font-size: 2.5rem;
@@ -132,7 +126,6 @@ body {
     color: #B882D9;
 }
 
-/* Author Section */
 .author-section {
     padding: 80px 0;
 }
@@ -154,7 +147,6 @@ body {
     position: relative;
     z-index: 2;
     background: #f0f0f0;
-    /* CORREGIDO: Asegurar que no se mueva en móvil */
     will-change: transform;
 }
 
@@ -199,7 +191,6 @@ body {
     font-weight: 700;
 }
 
-/* Info Cards */
 .info-card {
     background: white;
     padding: 20px;
@@ -239,7 +230,6 @@ body {
     color: #171717;
 }
 
-/* Purpose Section */
 .purpose-section {
     padding: 80px 0;
     background: white;
@@ -254,11 +244,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* CORREGIDO: Altura mínima para evitar colapso */
     min-height: 400px;
 }
 
-/* CORREGIDO: Imagen purpose sin parallax excesivo */
 .purpose-image {
     width: 100%;
     max-width: 450px;
@@ -269,7 +257,6 @@ body {
     position: relative;
     z-index: 2;
     background: #f0f0f0;
-    /* IMPORTANTE: Evitar que el parallax mueva demasiado */
     will-change: transform;
 }
 
@@ -308,7 +295,6 @@ body {
     font-weight: 700;
 }
 
-/* Purpose List */
 .purpose-list {
     margin-top: 30px;
 }
@@ -355,7 +341,6 @@ body {
     margin: 0;
 }
 
-/* Mission Box */
 .mission-box {
     background: linear-gradient(135deg, #B882D9, #A3CFD9);
     padding: 30px;
@@ -378,7 +363,6 @@ body {
     line-height: 1.6;
 }
 
-/* Skills Section */
 .skills-section {
     padding: 80px 0;
 }
@@ -425,7 +409,6 @@ body {
     margin: 0;
 }
 
-/* Tools */
 .tools-section h3 {
     font-family: 'Urbanist', sans-serif;
     font-size: 1.8rem;
@@ -457,7 +440,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Gallery Section */
 .gallery-section {
     padding: 80px 0;
 }
@@ -483,7 +465,6 @@ body {
     background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
 }
 
-/* CTA Section */
 .cta-section {
     padding: 80px 0;
 }
@@ -530,7 +511,6 @@ body {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Footer */
 .footer-section {
     background: #A3CFD9;
     height: 150px;
@@ -548,7 +528,6 @@ body {
     bottom: 0;
 }
 
-/* Responsive */
 @media (max-width: 991px) {
     .custom-navbar .nav-link {
         margin: 5px 0;
@@ -576,7 +555,6 @@ body {
         display: none;
     }
     
-    /* CORREGIDO: Ajustar wrapper en tablets */
     .purpose-image-wrapper {
         min-height: 350px;
         margin-bottom: 30px;
@@ -607,15 +585,12 @@ body {
         padding: 40px 20px;
     }
     
-    /* CORREGIDO PARA MÓVIL: Sin parallax, imagen centrada */
     .author-image,
     .purpose-image {
         margin-bottom: 30px;
-        /* IMPORTANTE: Resetear transform en móvil */
         transform: none !important;
     }
     
-    /* CORREGIDO: Wrapper más pequeño en móvil */
     .purpose-image-wrapper {
         min-height: auto;
         margin-bottom: 30px;
@@ -668,7 +643,6 @@ body {
         font-size: 1.5rem;
     }
     
-    /* CORREGIDO: Imagen más pequeña en pantallas pequeñas */
     .purpose-image {
         height: 350px;
     }
